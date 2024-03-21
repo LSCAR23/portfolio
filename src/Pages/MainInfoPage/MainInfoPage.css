@@ -1,0 +1,165 @@
+.firstInfoContent {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-right: 8%;
+    margin-bottom: 2%;
+    margin-left: 8%;
+
+
+}
+
+.imageContent {
+    width: auto;
+    height: auto;
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+.myImage {
+    width: 300px;
+    height: 300px;
+}
+
+.aboutInfo {
+    margin: auto;
+    color: #fff;
+    text-align: center;
+}
+
+.skillsContent {
+    background-color: #00244C;
+    position: relative;
+    overflow: hidden;
+    margin: 0%;
+}
+
+.iconContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.imgIcon {
+    height: 75px;
+    width: 75px;
+    position: relative;
+    z-index: 2;
+}
+
+.skillsTitle {
+    color: #fff;
+    font-size: 40px;
+    margin: 0%;
+}
+
+.skillsContent::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    background: linear-gradient(to left, #60baff 0%, #00244C 100%);
+    filter: blur(50px);
+    animation: blurAnimation 5s linear;
+}
+
+
+.aboutContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes blurAnimation {
+    0% {
+        width: 0%
+    }
+
+    50% {
+        width: 50%
+    }
+
+    100% {
+        width: 75%
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    80% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    80% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIcon1 {
+    0% {
+        transform: translateX(1500%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideIcon2 {
+    0% {
+        transform: translateX(1200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideIcon3 {
+    0% {
+        transform: translateX(900%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideIcon4 {
+    0% {
+        transform: translateX(600%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideIcon5 {
+    0% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+

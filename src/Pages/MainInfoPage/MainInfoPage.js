@@ -19,11 +19,11 @@ const MainInfoPage = () => {
                 </div>
 
                 <div className="aboutContent">
-                    <p className="aboutInfo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p className="aboutInfo">I'm a passionate software engineering student nearing completion of my diploma, eager to translate my learnings into real-world applications.  I possess a strong foundation in various technologies like React, Python, Firebase, C#, PostgreSQL, Flutter, and Java, honed through university projects and personal endeavors.  My drive to learn extends beyond programming, as I'm also finalizing my English studies at the university.  I thrive in environments that encourage continuous learning and innovation, allowing me to explore the potential of different technologies and create impactful solutions.</p>
                 </div>
             </div>
             <div className="skillsContent">
-                <h2 className="skillsTitle">Skills</h2>
+                <h2 className="skillsTitle">Tech Stack</h2>
                 <div className="iconContent">
                 <img className="imgIcon" style={{animation: "slideIcon1 1s ease-in-out 0s 1"}} src={reactIcon} />
                 <img className="imgIcon" style={{animation: "slideIcon2 1.5s ease-in-out 0s 1"}} src={flutterIcon} />

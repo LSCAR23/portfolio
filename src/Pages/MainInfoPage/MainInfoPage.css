@@ -23,7 +23,7 @@
 }
 
 .phone {
-    color: #fff;
+    color: #02BA26;
     cursor: pointer;
     font-size: 15px;
     border-radius: 5px;
@@ -31,11 +31,11 @@
 }
 
 .phone:hover {
-    color: #00244C;
+    color: #007bff;
 }
 
 .correo {
-    color: #fff;
+    color: #892cdc;
     cursor: pointer;
     text-decoration: none;
     border-radius: 5px;
@@ -44,7 +44,7 @@
 }
 
 .correo:hover {
-    color: #00244C;
+    color: #007bff;
 }
 
 .myImage {

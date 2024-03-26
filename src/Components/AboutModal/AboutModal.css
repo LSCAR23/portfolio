@@ -1,0 +1,47 @@
+/* Estilos para el modal */
+.ReactModal__Content {
+    background-color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  /* Estilos para el título del modal */
+  .ReactModal__Content h2 {
+    margin-top: 0;
+    color: #fff;
+  }
+  
+  /* Estilos para el contenido del modal */
+  .ReactModal__Content p {
+    line-height: 1.5;
+    color: #fff;
+  }
+  
+  /* Estilos para el botón de cierre del modal */
+  .ReactModal__Content button {
+    background-color: #00244C;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25%;
+    
+  }
+
+  .ReactModal__Content button:hover{
+    background-color: #007bff;
+  }
+  

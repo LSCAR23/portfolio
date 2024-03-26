@@ -1,11 +1,11 @@
-/* Navbar.css */
+
 
 .navbar {
 
     background-color: #00244C;
     position: relative;
     overflow: hidden;
-
+    margin-top: 3%;
     padding: 10px;
     border-bottom: 1px solid #ddd;
     border-radius: 500px;
@@ -72,3 +72,9 @@
         width: 75%
     }
 }
+
+@media screen and (max-width: 480px) {
+    .navbar{
+      display: none;
+    }
+  }

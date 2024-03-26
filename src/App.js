@@ -4,11 +4,13 @@ import Navbar from './Components/Navbar/Navbar';
 import MainInfoPage from './Pages/MainInfoPage/MainInfoPage';
 import ProjectPage from './Pages/ProjectsPage/ProjectsPage';
 import './App.css'
+import Navburger from './Components/NavBurger/NavBurger';
 const App = () => {
   return (
     <div className='App'>
     <Router>
       <Navbar />
+      <Navburger/>
       <Routes>
         <Route path="/" exact element={<MainInfoPage/>} />
         <Route path="/projects" element={<ProjectPage/>} />

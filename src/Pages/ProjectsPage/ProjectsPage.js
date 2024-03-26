@@ -1,10 +1,44 @@
 import React from "react";
-
-const ProjectsPage =()=>{
-
-    return(
+import Card from "../../Components/Card/Card";
+import me from "../../images/me.jpeg";
+const ProjectsPage = () => {
+    const cardsInfo = [
+        {
+            title: 'JOBS',
+            image: me,
+            description: 'Proyecto descripción.....'
+        },
+        {
+            title: 'JOBS',
+            image: me,
+            description: 'Proyecto descripción.....'
+        },
+        {
+            title: 'JOBS',
+            image: me,
+            description: 'Proyecto descripción.....'
+        },
+        {
+            title: 'JOBS',
+            image: me,
+            description: 'Proyecto descripción.....'
+        },
+        {
+            title: 'JOBS',
+            image: me,
+            description: 'Proyecto descripción.....'
+        },
+        {
+            title: 'JOBS',
+            image: me,
+            description: 'Proyecto descripción.....'
+        }
+    ];
+    return (
         <div>
-            <h1 style={{color: "#000"}}>hhhhhhhhhhhhhhhhhhhhhhahahaha</h1>
+            {cardsInfo.map((card, index) => (
+                <Card title={card.title} image={card.image} description={card.description} />
+            ))}
         </div>
     )
 }

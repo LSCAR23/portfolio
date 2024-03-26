@@ -5,6 +5,8 @@ import flutterIcon from '../../images/flutterImg.png'
 import pythonIcon from '../../images/pythonImg.png'
 import firebaseIcon from '../../images/firebaseImg.png'
 import csharpIcon from '../../images/csharpImg.png'
+import javaIcon from '../../images/javaImg.png'
+import postgresIcon from '../../images/postgresImg.png'
 import './TechStackModal.css'
 const TechStackModal = ({ isOpen, onRequestClose}) => {
     return (
@@ -17,6 +19,10 @@ const TechStackModal = ({ isOpen, onRequestClose}) => {
                 <img className="imgIcon" src={firebaseIcon} />
                 <img className="imgIcon" src={csharpIcon} />
                 <img className="imgIcon" src={pythonIcon} />
+            </div>
+            <div id='d1' className='divsModalTech'>
+                <img className="imgIcon" src={javaIcon} />
+                <img className="imgIcon" src={postgresIcon} />
             </div>
             <button onClick={onRequestClose}>Close</button>
         </Modal>

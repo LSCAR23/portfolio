@@ -21,9 +21,9 @@
     transform: translateY(-30px);
   }
   
-  .card img {
+  .cardImg {
     border-radius: 5px 5px 0 0;
-    width: 250px;
+    width: auto;
     height: 250px;
   }
   
@@ -32,6 +32,7 @@
   }
   .card-title{
     color: #fff;
+    font-size: 20px;
   }
   .card-text{
     color: #fff;

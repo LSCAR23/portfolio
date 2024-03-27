@@ -73,7 +73,7 @@ const MainInfoPage = () => {
             </div>
             <div className="skillsContent">
                 <h2 className="skillsTitle" onClick={()=>setIsModalTechOpen(true)} style= {isModalOpen? indexStyle['index2']:isModalTechOpen?indexStyle['index2']:indexStyle['index1']}>Tech Stack</h2>
-                <div className="iconContent" style= {isModalOpen? indexStyle['index2']:isModalTechOpen?indexStyle['index2']:indexStyle['index1']}>
+                <div className="iconContent">
                     <img className="imgIcon" style={{ animation: "slideIcon1 1s ease-in-out 0s 1" }} src={reactIcon} />
                     <img className="imgIcon" style={{ animation: "slideIcon2 1.5s ease-in-out 0s 1" }} src={flutterIcon} />
                     <img className="imgIcon" style={{ animation: "slideIcon3 2s ease-in-out 0s 1" }} src={firebaseIcon} />

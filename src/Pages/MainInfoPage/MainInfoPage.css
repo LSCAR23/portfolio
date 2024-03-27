@@ -100,7 +100,7 @@
     color: #007bff;
 }
 
-.skillsContent::after {
+.skillsContent::before {
     content: "";
     position: absolute;
     top: 0;

@@ -4,9 +4,9 @@ import './AboutModal.css'
 const AboutModal = ({ isOpen, onRequestClose, children }) => {
   return (
     <Modal isOpen={isOpen} onRequestClose={onRequestClose} className='ReactModal__Content'>
-      <h2>About me</h2>
-      <p>{children}</p>
-      <button onClick={onRequestClose}>Close</button>
+      <h2 className='titleAbout'>About me</h2>
+      <p className='paragraphAbout'>{children}</p>
+      <button  className='closingButton' onClick={onRequestClose}>Close</button>
     </Modal>
   );
 };

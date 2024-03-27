@@ -1,0 +1,55 @@
+
+
+.custom-modal {
+
+    background-color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    
+}
+
+
+.slick-dots li button {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #333;
+}
+
+
+
+
+
+
+
+.slide-description {
+    font-size: 1rem;
+    color: #aaa;
+    margin: 5px 0;
+}
+
+.carousel-slide img {
+    max-width: 45%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+}
+.slide-title {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #fff;
+}

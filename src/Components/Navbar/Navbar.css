@@ -14,18 +14,7 @@
     animation: 2s ease-out 0s 1 slideInFromTop;
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-}
 
-.nav-list li {
-    margin-right: 20px;
-    position: relative;
-    z-index: 2;
-}
 
 .nav-list li a {
     text-decoration: none;
@@ -48,7 +37,7 @@
     }
 }
 
-.navbar::after {
+.navbar::before {
     content: "";
     position: absolute;
     top: 0;
@@ -58,6 +47,19 @@
     background: linear-gradient(to left, #60baff 0%, #00244C 100%);
     filter: blur(50px);
     animation: blurAnimation 5s linear;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    position: relative;
+}
+
+.nav-list li {
+    margin-right: 20px;
+    position: relative;
 }
 @keyframes blurAnimation {
     0% {

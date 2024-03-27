@@ -24,7 +24,7 @@ const TechStackModal = ({ isOpen, onRequestClose}) => {
                 <img className="imgIcon" src={javaIcon} />
                 <img className="imgIcon" src={postgresIcon} />
             </div>
-            <button onClick={onRequestClose}>Close</button>
+            <button className='closingButton' onClick={onRequestClose}>Close</button>
         </Modal>
     );
 };

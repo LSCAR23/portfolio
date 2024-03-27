@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='App'>
     <Router>
-      <Navbar />
+      <Navbar/>
       <Navburger/>
       <Routes>
         <Route path="/" exact element={<MainInfoPage/>} />

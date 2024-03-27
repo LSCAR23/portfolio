@@ -14,19 +14,19 @@
   }
   
   /* Estilos para el título del modal */
-  .ReactModal__Content h2 {
+  .titleAbout {
     margin-top: 0;
     color: #fff;
   }
   
   /* Estilos para el contenido del modal */
-  .ReactModal__Content p {
+  .paragraphAbout {
     line-height: 1.5;
     color: #fff;
   }
   
   /* Estilos para el botón de cierre del modal */
-  .ReactModal__Content button {
+  .closingButton {
     background-color: #00244C;
     color: #fff;
     border: none;
@@ -41,7 +41,7 @@
     
   }
 
-  .ReactModal__Content button:hover{
+  .closingButton:hover{
     background-color: #007bff;
   }
   

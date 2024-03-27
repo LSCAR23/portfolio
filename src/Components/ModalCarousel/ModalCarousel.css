@@ -9,10 +9,7 @@
     width: 90%;
     margin: auto;
     position: absolute;
-
     transform: translate(-50%, -50%);
-    z-index: 5;
-    
 }
 
 
@@ -39,10 +36,12 @@
     font-size: 1rem;
     color: #aaa;
     margin: 5px 0;
+    max-Height: 100px; 
+    overflow-Y: auto;
 }
 
 .carousel-slide img {
-    max-width: 45%;
+    max-width: 35%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -50,6 +49,6 @@
 }
 .slide-title {
     font-size: 20px;
-    margin: 10px 0;
+    margin-top: 30px;
     color: #fff;
 }

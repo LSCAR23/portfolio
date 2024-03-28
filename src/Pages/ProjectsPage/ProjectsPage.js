@@ -6,11 +6,18 @@ import jobsworkers from '../../images/jobsWorkers/jworkers1.png';
 import jobsworkers2 from '../../images/jobsWorkers/jworkers2.png';
 import jobsworkers3 from '../../images/jobsWorkers/jworkers3.png';
 import jobsworkers4 from '../../images/jobsWorkers/jworkers4.png';
+
 import jobs from '../../images/jobs/jobs1.png';
 import jobs2 from '../../images/jobs/jobs2.png';
 import jobs3 from '../../images/jobs/jobs3.png';
 import jobs4 from '../../images/jobs/jobs4.png';
 import jobs5 from '../../images/jobs/jobs5.png';
+
+import pagMeteorito1 from '../../images/pagMeteorito/PagMeteorito1.png'
+import pagMeteorito2 from '../../images/pagMeteorito/PagMeteorito2.png'
+import pagMeteorito3 from '../../images/pagMeteorito/PagMeteorito3.png'
+import pagMeteorito4 from '../../images/pagMeteorito/PagMeteorito4.png'
+import pagMeteorito5 from '../../images/pagMeteorito/PagMeteorito5.png'
 const ProjectsPage = () => {
     const cardsInfo = [
         {
@@ -22,8 +29,14 @@ const ProjectsPage = () => {
         {
             title: 'JOBS WORKERS',
             image: jobsworkers,
-            description: 'Proyecto descripción',
+            description: "I'm a passionate software engineering student nearing completion of my diploma, eager to translate my learnings into real-world applications.  I possess a strong foundation in various technologies like React, Python, Firebase, C#, PostgreSQL, Flutter, and Java, honed through university projects and personal endeavors.  My drive to learn extends beyond programming, as I'm also finalizing my English studies at the university.  I thrive in environments that encourage continuous learning and innovation, allowing me to explore the potential of different technologies and create impactful solutions.",
             images:[jobsworkers,jobsworkers2,jobsworkers3,jobsworkers4]
+        },
+        {
+            title: 'WEB SITE MATEORITE AGUAS ZARCAS',
+            image: pagMeteorito1,
+            description: "I'm a passionate software engineering student nearing completion of my diploma, eager to translate my learnings into real-world applications.  I possess a strong foundation in various technologies like React, Python, Firebase, C#, PostgreSQL, Flutter, and Java, honed through university projects and personal endeavors.  My drive to learn extends beyond programming, as I'm also finalizing my English studies at the university.  I thrive in environments that encourage continuous learning and innovation, allowing me to explore the potential of different technologies and create impactful solutions.",
+            images:[pagMeteorito1,pagMeteorito2,pagMeteorito3,pagMeteorito4,pagMeteorito5]
         }
     ];
     return (

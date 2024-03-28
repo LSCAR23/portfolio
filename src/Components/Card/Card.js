@@ -10,9 +10,12 @@ const Card = ({ title, image, description, images }) => {
         <img className='cardImg' src={image} alt={title} />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
+          <div className='descriptionContainer'>
           <p className="card-text">
             {description.slice(0, 60)+'.....'}
           </p>
+          </div>
+          
         </div>
       </div>
       <ModalCarousel

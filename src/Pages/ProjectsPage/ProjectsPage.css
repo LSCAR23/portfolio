@@ -1,0 +1,11 @@
+.projectsContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    .projectsContent{
+      flex-direction: column;
+    }
+  }

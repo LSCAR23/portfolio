@@ -41,8 +41,8 @@
 }
 
 .carousel-slide img {
-    max-width: 35%;
-    height: auto;
+    max-width: 450px;
+    max-height: 350px;
     display: block;
     margin: 0 auto;
     padding: 5px;

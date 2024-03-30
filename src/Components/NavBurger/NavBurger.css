@@ -1,15 +1,10 @@
 .navBurger {
     color: #fff;
     display: none;
-
-
     background-color: #00244C;
-    position: relative;
     overflow: hidden;
     text-align: start;
-    padding: 10px;
     border-bottom: 1px solid #ddd;
-
     animation: 2s ease-out 0s 1 slideInFromTop;
 }
 
@@ -18,10 +13,9 @@
     background-color: #00244C;
     color: #fff;
     border: none;
-    padding: 10px;
     cursor: pointer;
     z-index: 2;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 .navBurger ul {
@@ -42,6 +36,17 @@
 .navBurger li a:hover {
     color: #007bff;
 }
+
+.nav-menu {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease; /* Transición suave */
+  }
+  
+  .nav-menu-active {
+    height: 120px; 
+    transition: height 0.5s ease; /* Transición suave al cerrar */
+  }
 
 @keyframes slideInFromTop {
     0% {
@@ -70,6 +75,6 @@
 
 @media screen and (max-width: 480px) {
     .navBurger {
-        display: block;
+        display:block;
     }
 }

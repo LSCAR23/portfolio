@@ -17,6 +17,10 @@ import pagMeteorito2 from '../../images/pagMeteorito/PagMeteorito2.png'
 import pagMeteorito3 from '../../images/pagMeteorito/PagMeteorito3.png'
 import pagMeteorito4 from '../../images/pagMeteorito/PagMeteorito4.png'
 import pagMeteorito5 from '../../images/pagMeteorito/PagMeteorito5.png'
+import pagMeteorito6 from '../../images/pagMeteorito/PagMeteorito6.png'
+import pagMeteorito7 from '../../images/pagMeteorito/PagMeteorito7.png'
+import pagMeteorito8 from '../../images/pagMeteorito/PagMeteorito8.png'
+
 const ProjectsPage = () => {
     const cardsInfo = [
         {
@@ -35,7 +39,7 @@ const ProjectsPage = () => {
             title: 'WEB SITE MATEORITE AGUAS ZARCAS',
             image: pagMeteorito1,
             description: "A simple website for a university community, in which I collaborate in its development. This site, built using React, focuses on a meteorite that fell near the community of Aguas Zarcas. It will include scientific data, curiosities and information about both the local community and the nearby areas impacted by the meteorite.",
-            images:[pagMeteorito1,pagMeteorito2,pagMeteorito3,pagMeteorito4,pagMeteorito5]
+            images:[pagMeteorito1,pagMeteorito2,pagMeteorito3,pagMeteorito4,pagMeteorito5,pagMeteorito6,pagMeteorito7,pagMeteorito8]
         }
     ];
     return (

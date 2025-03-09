@@ -4,18 +4,22 @@ import { useState, useEffect, useRef } from 'react';
 import ModalCarousel from '../ModalCarousel/ModalCarousel';
 const Card = ({ title, image, description, images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
   return (
-    <div className="card" >
-      <div onClick={() => setIsModalOpen(true)}>
-        <img className='cardImg' src={image} alt={title} />
+    <div className="card">
+      <div className="card-content" onClick={() => setIsModalOpen(true)} style={{ cursor: 'pointer' }}>
+        <img 
+          className='cardImg' 
+          src={image} 
+          alt={title} 
+        />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <div className='descriptionContainer'>
-          <p className="card-text">
-            {description.slice(0, 60)+'.....'}
-          </p>
+            <p className="card-text">
+              {description.slice(0, 60)+'.....'}
+            </p>
           </div>
-          
         </div>
       </div>
       <ModalCarousel

@@ -2,12 +2,19 @@ import React from 'react';
 import './Card.css'
 import { useState, useEffect, useRef } from 'react';
 import ModalCarousel from '../ModalCarousel/ModalCarousel';
+
 const Card = ({ title, image, description, images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   
+  // Función para truncar el texto con una longitud adecuada
+  const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + '...';
+  };
+  
   return (
-    <div className="card">
-      <div className="card-content" onClick={() => setIsModalOpen(true)} style={{ cursor: 'pointer' }}>
+    <div className="card" onClick={() => setIsModalOpen(true)}>
+      <div className="card-content">
         <img 
           className='cardImg' 
           src={image} 
@@ -17,7 +24,7 @@ const Card = ({ title, image, description, images }) => {
           <h5 className="card-title">{title}</h5>
           <div className='descriptionContainer'>
             <p className="card-text">
-              {description.slice(0, 60)+'.....'}
+              {truncateText(description, 80)}
             </p>
           </div>
         </div>
@@ -28,7 +35,7 @@ const Card = ({ title, image, description, images }) => {
         images={images}
         title={title}
         description={description}
-      ></ModalCarousel>
+      />
     </div>
   )
 }

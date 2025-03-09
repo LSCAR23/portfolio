@@ -72,6 +72,12 @@ const ModalCarousel = ({ isOpen, onRequestClose, images, title, description, ini
         document.body.style.overflow = '';
     };
 
+    const handleCloseModal = (e) => {
+        // Detener la propagación para evitar conflictos con otros manejadores de eventos
+        e.stopPropagation();
+        onRequestClose();
+    };
+
     const navigateImages = (direction) => {
         let newIndex = currentImageIndex;
         
@@ -173,8 +179,9 @@ const ModalCarousel = ({ isOpen, onRequestClose, images, title, description, ini
                     <p className="slide-description">{description}</p>
                     <button 
                         className='closingButton' 
-                        onClick={onRequestClose}
+                        onClick={handleCloseModal}
                         aria-label="Cerrar carrusel"
+                        type="button"
                     >
                         Cerrar
                     </button>

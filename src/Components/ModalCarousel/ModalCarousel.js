@@ -156,7 +156,7 @@ const ModalCarousel = ({ isOpen, onRequestClose, images, title, description, ini
                             &times;
                         </button>
                         <div className="keyboard-nav-hint">
-                            Usa <span className="key-icon">←</span> <span className="key-icon">→</span> para navegar
+                            Use <span className="key-icon">←</span> <span className="key-icon">→</span> to navigate
                         </div>
                     </div>
                 </div>
@@ -183,10 +183,10 @@ const ModalCarousel = ({ isOpen, onRequestClose, images, title, description, ini
                         aria-label="Cerrar carrusel"
                         type="button"
                     >
-                        Cerrar
+                        close
                     </button>
                     <div className="keyboard-nav-hint">
-                        Usa <span className="key-icon">←</span> <span className="key-icon">→</span> para navegar
+                        Use <span className="key-icon">←</span> <span className="key-icon">→</span> to navigate
                     </div>
                 </>
             )}

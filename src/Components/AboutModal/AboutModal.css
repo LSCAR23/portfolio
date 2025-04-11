@@ -12,6 +12,17 @@
     transform: translate(-50%, -50%);
     z-index: 2;
   }
+  .modalContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 10px;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 10px 0 rgba(0, 123, 255, 0.5);
+    padding: 2%;
+  } 
   
   /* Estilos para el título del modal */
   .titleAbout {

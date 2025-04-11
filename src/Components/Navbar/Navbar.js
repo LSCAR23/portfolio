@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
-import CV from '../../CV/OscarCV.pdf';
+import CV from '../../CV/Oscar_Lara_CV.pdf';
 const Navbar = () => {
 
 

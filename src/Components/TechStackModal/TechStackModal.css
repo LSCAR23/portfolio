@@ -4,6 +4,19 @@
     margin: 20px 0;
 }
 
+.mainModalTechContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 10px;
+    padding: 1%;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 10px 0 rgba(0, 123, 255, 0.5);
+}   
+
+
+
 /* Eliminamos las animaciones de los divs */
 #d1, #d2, #d3 {
     position: relative;

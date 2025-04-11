@@ -5,18 +5,16 @@ import reactIcon from '../../images/reactImg.png'
 import flutterIcon from '../../images/flutterImg.png'
 import pythonIcon from '../../images/pythonImg.png'
 import firebaseIcon from '../../images/firebaseImg.png'
-import csharpIcon from '../../images/csharpImg.png'
+import AboutModal from "../../Components/AboutModal/AboutModal";
 import nextIcon from '../../images/next.png'
 import mongoIcon from '../../images/mongo.png'
 import ClipboardJS from 'clipboard';
 import { useState, useEffect, useRef } from 'react';
-import AboutModal from "../../Components/AboutModal/AboutModal";
 import TechStackModal from "../../Components/TechStackModal/TechStackModal";
 const MainInfoPage = () => {
     const phone = '+506 83105790';
     const phoneRef = useRef(null);
     const correo = 'laraoscar2310@gmail.com';
-
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isModalTechOpen, setIsModalTechOpen] = useState(false);
     const aboutInfo = "I'm a seasoned Full Stack Web Developer with over a year of hands-on experience in building and deploying professional web applications. My expertise spans across the entire development lifecycle, from conceptualization to deployment and maintenance. I've successfully delivered multiple client projects, leveraging technologies like React, Next.js, Node.js, and MongoDB to create responsive, user-friendly applications. My background in software engineering combined with practical experience has equipped me with strong problem-solving skills and the ability to adapt to new technologies quickly. I'm proficient in modern frontend frameworks, backend development, database management, and cloud services. I'm passionate about creating clean, efficient code and continuously expanding my technical knowledge to deliver innovative solutions that exceed client expectations.";
@@ -42,14 +40,13 @@ const MainInfoPage = () => {
             e.clearSelection();
         });
 
-        // Limpiar en desmontaje
         return () => {
             clipboard.destroy();
         };
     }, []);
 
     return (
-        <div>
+        <div className="main-container">
             <div className="firstInfoContent">
                 <div className="imageContent">
                     <img className="myImage" src={peronImage} alt="Oscar Lara"></img>
@@ -63,7 +60,6 @@ const MainInfoPage = () => {
                 <div className="aboutContent">
                     <p className="aboutInfo">{aboutInfo}</p>
                 </div>
-
                 <div className="aboutContentM">
                     <p className="aboutInfo">{previewText} <button onClick={() => setIsModalOpen(true)}>See more</button></p>
                 </div>
@@ -71,10 +67,9 @@ const MainInfoPage = () => {
                 <AboutModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
                     {aboutInfo}
                 </AboutModal>
-                <TechStackModal isOpen={isModalTechOpen} onRequestClose={()=> setIsModalTechOpen(false)}></TechStackModal>
             </div>
             <div className="skillsContent">
-                <h2 className="skillsTitle" onClick={()=>setIsModalTechOpen(true)} style= {isModalOpen? indexStyle['index2']:isModalTechOpen?indexStyle['index2']:indexStyle['index1']}>Tech Stack</h2>
+                <h2 className="skillsTitle" onClick={()=>setIsModalTechOpen(true)} style= {isModalTechOpen? indexStyle['index2']:isModalTechOpen?indexStyle['index2']:indexStyle['index1']}>Tech Stack</h2>
                 <div className="iconContent">
                     <img className="imgIcon" style={{ animation: "slideIcon1 1s ease-in-out 0s 1" }} src={reactIcon} alt="React" />
                     <img className="imgIcon" style={{ animation: "slideIcon2 1.5s ease-in-out 0s 1" }} src={nextIcon} alt="Next.js" />
@@ -84,6 +79,7 @@ const MainInfoPage = () => {
                     <img className="imgIcon" style={{ animation: "slideIcon6 3.5s ease-in-out 0s 1" }} src={pythonIcon} alt="Python" />
                 </div>
             </div>
+            {isModalTechOpen && <TechStackModal isOpen={isModalTechOpen} onRequestClose={()=> setIsModalTechOpen(false)} />}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBurger.css'
-import CV from '../../CV/OscarCV.pdf';
+import CV from '../../CV/Oscar_Lara_CV.pdf';
 
 const Navburger = () => {
     const [isOpen, setIsOpen] = useState(false);

@@ -13,10 +13,7 @@ const Navbar = () => {
                     <Link to="/">Me</Link>
                 </li>
                 <li>
-                    <a href={CV} target="_blank" rel="noopener noreferrer">CV</a>
-                </li>
-                <li>
-                    <Link to="/projects">Projects</Link>
+                    <a href={CV} target="_blank" rel="noopener noreferrer">Resume</a>
                 </li>
             </ul>
         </div>

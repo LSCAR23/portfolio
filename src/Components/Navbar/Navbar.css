@@ -1,8 +1,13 @@
-
-
 .navbar {
 
-    background-color: #00244C;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(248, 249, 250, 0.05));
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.1),
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        0 0 40px rgba(137, 44, 220, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
     margin-top: 3%;
@@ -44,8 +49,29 @@
     bottom: 0;
     right: 0;
     width: 75%;
-    background: linear-gradient(to left, #60baff 0%, #00244C 100%);
+    background: linear-gradient(135deg,
+            rgba(137, 44, 220, 0.05) 0%,
+            transparent 50%,
+            rgba(137, 44, 220, 0.03) 100%);
     filter: blur(50px);
+    animation: blurAnimation 5s linear;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    background: linear-gradient(135deg,
+            rgba(137, 44, 220, 0.3) 0%,
+            rgba(137, 44, 220, 0.1) 25%,
+            transparent 50%,
+            rgba(137, 44, 220, 0.1) 75%,
+            rgba(137, 44, 220, 0.2) 100%);
+    filter: blur(50px);
+    pointer-events: none;
     animation: blurAnimation 5s linear;
 }
 
@@ -61,6 +87,7 @@
     margin-right: 20px;
     position: relative;
 }
+
 @keyframes blurAnimation {
     0% {
         width: 0%
@@ -76,7 +103,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .navbar{
-      display: none;
+    .navbar {
+        display: none;
     }
-  }
+}

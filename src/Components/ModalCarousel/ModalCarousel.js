@@ -23,6 +23,7 @@ const ModalCarousel = ({ isOpen, onRequestClose, images, title, description, ini
         initialSlide: initialSlide,
         afterChange: (current) => setCurrentImageIndex(current),
         lazyLoad: 'ondemand',
+        arrows: false,
     };
 
     // Manejar teclas para navegación y cierre
@@ -106,60 +107,58 @@ const ModalCarousel = ({ isOpen, onRequestClose, images, title, description, ini
             closeTimeoutMS={300}
         >
             {enlargedImage ? (
-                <div 
-                    className="enlarged-view" 
-                    onClick={closeEnlargedView}
-                    ref={enlargedViewRef}
-                >
-                    <div className="navigation-controls">
-                        <button 
-                            className="nav-button prev-button" 
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                navigateImages('prev');
-                            }}
-                            aria-label="Imagen anterior"
-                        >
-                            &#10094;
-                        </button>
-                        <button 
-                            className="nav-button next-button" 
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                navigateImages('next');
-                            }}
-                            aria-label="Imagen siguiente"
-                        >
-                            &#10095;
-                        </button>
-                    </div>
-                    
-                    <div className="image-container">
-                        <img 
-                            src={enlargedImage} 
-                            alt={`Vista ampliada ${currentImageIndex + 1} de ${images.length}`} 
-                            className="enlarged-image" 
-                            onClick={(e) => e.stopPropagation()}
-                        />
-                    </div>
-                    
-                    <div className="enlarged-controls">
-                        <span className="image-counter">{currentImageIndex + 1} / {images.length}</span>
-                        <button 
-                            className="close-button" 
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                closeEnlargedView();
-                            }}
-                            aria-label="Cerrar vista ampliada"
-                        >
-                            &times;
-                        </button>
-                        <div className="keyboard-nav-hint">
-                            Use <span className="key-icon">←</span> <span className="key-icon">→</span> to navigate
-                        </div>
-                    </div>
+                <div className="enlarged-view" onClick={closeEnlargedView} ref={enlargedViewRef}>
+  
+                <div className="image-navigation-wrapper">
+                  <div className="navigation-controls">
+                    <button 
+                      className="nav-button prev-button" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigateImages('prev');
+                      }}
+                      aria-label="Imagen anterior"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" width="24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg>
+                    </button>
+                    <button 
+                      className="nav-button next-button" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigateImages('next');
+                      }}
+                      aria-label="Imagen siguiente"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" width="24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+                    </button>
+                  </div>
+              
+                  <div className="image-container">
+                    <img 
+                      src={enlargedImage} 
+                      alt={`Vista ampliada ${currentImageIndex + 1} de ${images.length}`} 
+                      className="enlarged-image" 
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                  </div>
                 </div>
+              
+                <div className="enlarged-controls">
+                  <span className="image-counter">{currentImageIndex + 1} / {images.length}</span>
+                  <button 
+                    className="close-button" 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      closeEnlargedView();
+                    }}
+                    aria-label="Cerrar vista ampliada"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
+              
+              
             ) : (
                 <>
                     <Slider ref={sliderRef} {...settings}>

@@ -1,0 +1,285 @@
+.projects-carousel-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(137, 44, 220, 0.05) 0%,
+      transparent 50%,
+      rgba(137, 44, 220, 0.03) 100%
+    );
+    border-radius: 30px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .projects-carousel-container::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      135deg,
+      rgba(137, 44, 220, 0.3) 0%,
+      rgba(137, 44, 220, 0.1) 25%,
+      transparent 50%,
+      rgba(137, 44, 220, 0.1) 75%,
+      rgba(137, 44, 220, 0.2) 100%
+    );
+    border-radius: 32px;
+    z-index: -2;
+    opacity: 0.6;
+  }/* MainInfoPage.css - Estilos para carrusel 3D */
+  
+  .projects-carousel-container {
+    perspective: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px 0;
+    position: relative;
+    overflow: visible;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(248, 249, 250, 0.05));
+    border-radius: 30px;
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.1),
+      0 10px 30px rgba(0, 0, 0, 0.05),
+      0 0 40px rgba(137, 44, 220, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .projects-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #aaa3a9;
+    font-weight: bold;
+    text-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.1),
+      0 0 20px rgba(137, 44, 220, 0.2);
+    position: relative;
+  }
+  
+  /* Container principal del carrusel 3D */
+  .carousel-3d-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Wrapper para las tarjetas en 3D */
+  .carousel-3d-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
+  /* Estilos para cada slide/tarjeta */
+  .carousel-slide-3d {
+    position: absolute;
+    width: 380px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    cursor: pointer;
+  }
+  
+  /* Tarjeta activa (centro) */
+  .carousel-slide-3d.active {
+    transform: translate(-50%, -50%) translateZ(200px) scale(1.1);
+    z-index: 10;
+    opacity: 1;
+  }
+  
+  /* Tarjetas laterales */
+  .carousel-slide-3d.prev {
+    transform: translate(-50%, -50%) translateZ(0px) translateX(-280px) rotateY(45deg) scale(0.8);
+    z-index: 5;
+    opacity: 0.7;
+  }
+  
+  .carousel-slide-3d.next {
+    transform: translate(-50%, -50%) translateZ(0px) translateX(280px) rotateY(-45deg) scale(0.8);
+    z-index: 5;
+    opacity: 0.7;
+  }
+  
+  /* Tarjetas más alejadas */
+  .carousel-slide-3d.far-prev {
+    transform: translate(-50%, -50%) translateZ(-200px) translateX(-450px) rotateY(60deg) scale(0.6);
+    z-index: 1;
+    opacity: 0.4;
+  }
+  
+  .carousel-slide-3d.far-next {
+    transform: translate(-50%, -50%) translateZ(-200px) translateX(450px) rotateY(-60deg) scale(0.6);
+    z-index: 1;
+    opacity: 0.4;
+  }
+  
+  /* Tarjetas ocultas */
+  .carousel-slide-3d.hidden {
+    transform: translate(-50%, -50%) translateZ(-400px) scale(0.3);
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  
+  
+  /* Controles de navegación */
+  .carousel-controls-3d {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    z-index: 20;
+  }
+  
+  .carousel-btn-3d {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(137, 44, 220, 0.3);
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 
+      5px 5px 15px rgba(0, 0, 0, 0.1),
+      -5px -5px 15px rgba(255, 255, 255, 0.9),
+      0 0 20px rgba(137, 44, 220, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: rgba(137, 44, 220, 0.8);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  .carousel-btn-3d:hover {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 
+      2px 2px 8px rgba(0, 0, 0, 0.1),
+      -2px -2px 8px rgba(255, 255, 255, 0.9),
+      0 0 25px rgba(137, 44, 220, 0.2);
+    transform: scale(1.1);
+    border-color: rgba(137, 44, 220, 0.5);
+    color: rgba(137, 44, 220, 1);
+  }
+  
+  .carousel-btn-3d:active {
+    box-shadow: 
+      inset 2px 2px 8px rgba(0, 0, 0, 0.1),
+      inset -2px -2px 8px rgba(255, 255, 255, 0.9),
+      0 0 15px rgba(137, 44, 220, 0.3);
+    transform: scale(0.95);
+    border-color: rgba(137, 44, 220, 0.7);
+  }
+  
+  
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .projects-carousel-container {
+      perspective: 800px;
+      padding: 30px 20px;
+      margin: 30px 10px;
+      box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.04),
+        0 0 30px rgba(137, 44, 220, 0.08);
+    }
+    
+    .carousel-3d-container {
+      height: 350px;
+      padding: 0 10px;
+    }
+    
+    .carousel-slide-3d {
+      width: 300px;
+      height: 240px;
+    }
+    
+    .carousel-slide-3d.prev,
+    .carousel-slide-3d.next {
+      transform: translate(-50%, -50%) translateZ(0px) translateX(-180px) rotateY(45deg) scale(0.7);
+    }
+    
+    .carousel-slide-3d.next {
+      transform: translate(-50%, -50%) translateZ(0px) translateX(180px) rotateY(-45deg) scale(0.7);
+    }
+    
+    .carousel-slide-3d.far-prev,
+    .carousel-slide-3d.far-next {
+      display: none;
+    }
+    
+    .carousel-controls-3d {
+      bottom: -60px;
+      gap: 20px;
+    }
+    
+    .carousel-btn-3d {
+      width: 45px;
+      height: 45px;
+      font-size: 1.1rem;
+    }
+    
+    .projects-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects-carousel-container {
+      padding: 20px 15px;
+      margin: 20px 5px;
+      border-radius: 20px;
+    }
+    
+    .carousel-3d-container {
+      height: 280px;
+    }
+    
+    .carousel-slide-3d {
+      width: 260px;
+      height: 200px;
+    }
+    
+    .carousel-slide-3d.prev,
+    .carousel-slide-3d.next {
+      transform: translate(-50%, -50%) translateZ(0px) translateX(-150px) rotateY(35deg) scale(0.6);
+    }
+    
+    .carousel-slide-3d.next {
+      transform: translate(-50%, -50%) translateZ(0px) translateX(150px) rotateY(-35deg) scale(0.6);
+    }
+    
+    .projects-title {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+    
+    .carousel-btn-3d {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+  }
